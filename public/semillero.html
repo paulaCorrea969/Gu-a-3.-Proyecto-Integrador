@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro Semilleros</title>
+</head>
+<body>
+
+<h1>Registro Semilleros</h1>
+<div>
+  <label for="carreraFiltro">Filtrar por Carrera:</label>
+  <select id="carreraFiltro">
+    <option value="">--Todas--</option>
+    <option value="Ingeniería"> Ingenieria Sistemas</option>
+    <option value="Ingeniería">Ingenieria Industrial</option>
+    <option value="Ingeniería">Ingenieria Electronica</option>
+    <option value="Administrar">Administacion de empresas</option>
+  </select>
+
+  <label for="tutorFiltro">Filtrar por Tutor:</label>
+  <select id="tutorFiltro">
+    <option value="">--Todos--</option>
+    <option value="Tutor Ingenieria">Tutor Ingenieria</option>
+    <option value="Tutor Administacion">Tutor Administacion</option>
+  </select>
+
+  <button id="btnFiltrar">Aplicar Filtros</button>
+</div>
+
+<div style="margin-top: 20px;">
+  <label for="semilleroSelect">Seleccione un Semillero:</label>
+  <select id="semilleroSelect">
+    <option value="">--Seleccione--</option>
+  </select>
+</div>
+
+<button id="btnExportarPDF" style="margin-top: 20px;">Exportar Tabla a PDF</button>
+
+<table id="tablaEstudiantes">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Carrera</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script src="libs/html2pdf.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

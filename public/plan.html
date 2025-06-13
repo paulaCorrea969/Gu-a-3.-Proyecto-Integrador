@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Registrar Actividad</title></head>
+<body>
+  <h1>Registrar Actividades</h1>
+ <form id="formActividad">
+    Descripción: <input name="descripcion" required><br>
+    Fecha Inicio: <input type="date" name="fecha_inicio" required><br>
+    Fecha Fin: <input type="date" name="fecha_fin" required><br>
+    Semestre: <input name="semestre" required><br>
+    Estudiante: <select name="estudiante_id" id="estudiantes" required></select><br>
+    <button type="submit">Registrar</button>
+  </form>
+  <p id="resultado"></p>
+
+  <h2>Registrar nueva actividad</h2> 
+  <form action="/api/registaractividad" method="post"></form>
+  <label for="titulo"></label>
+  <input type="text" id="Documento" name="Nombre" required><br>
+  <script>
+    async function cargarEstudiantes() {
+      const res = await fetch('/api/estudiantes');
+      const data = await res.json();
+      const select = document.getElementById('estudiantes');
+      data.forEach(e => {
+        const option = document.createElement('option');
+        option.value = e.id;
+        option.text = e.nombre;
+        select.add(option);
+      });
+    }
+    cargarEstudiantes();
+
+    document.getElementById('formActividad').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      const res = await fetch('/api/actividades', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) });
+      const result = await res.json();
+      document.getElementById('resultado').innerText = res.ok ? 'Registrado con ID: ' + result.id : 'Error: ' + result;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+</head>
+<body>
+
+  <div class="menu">
+    <div class="menu-item">Semillero EAN</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Estudiantes</a></li>
+        <li><a href="#">Tutores</a></li>
+        <li><a href="#">Consulta</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="recuadro">
+    <h1>Ingrese Usuario</h1>
+    <form action="/login" method="post">
+      <label for="correo">Correo:</label><br>
+      <input type="email" id="correo" name="correo" required><br><br>
+
+      <label for="contrasena">Contraseña:</label><br>
+      <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+      <button type="submit">Iniciar Sesión</button><br><br>
+      <a href="restablecercontraseña.html">¿Olvidó su Contraseña?</a>
+    </form>
+    
+    <br><br>
+    <a href="Registrar.html">
+      <button type="button">Registrar</button>
+    </a>
+  </div>
+
+</body>
+</html>

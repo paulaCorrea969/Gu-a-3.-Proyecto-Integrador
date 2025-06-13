@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registrar Tutor</title></head>
+<body>
+  <h1>Tutor</h1>
+  <form action="/api/tutor" method="post">
+ <li><label for="nombre">Nombre:</label></li>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <li><label for="correo">Correo:</label></li>
+    <input type="email" id="correo" name="correo" required>
+    
+    <li><label for="Area">Area:</label></li>
+    <input type="text" id="Area" name="Area" required>
+
+    <li><label for="Contraseña">Contraseña:</label></li>
+    <input type="text" id="Contraseña" name="Contraseña" required>
+
+    <li><label for="RepetirContraseña">Repetir Contraseña:</label></li>
+    <input type="text" id="RepetirContraseña" name="RepetirContraseña" required>
+  </form>
+      <button type="submit">Registrar</button>
+  </form>
+</body>
+</html>

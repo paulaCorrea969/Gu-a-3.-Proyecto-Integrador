@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Estudiantes y Semilleros</title>
+</head>
+<body>
+
+  <h1>Registro de Estudiantes</h1>
+
+  <form action="/api/estudiante" method="post">
+    <li><label for="nombre">Nombre:</label></li>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <li><label for="correo">Correo:</label></li>
+    <input type="email" id="correo" name="correo" required>
+    
+    <li><label for="Carrera">Carrera:</label></li>
+    <input type="text" id="Carrera" name="Carrera" required>
+
+    <li><label for="Contraseña">Contraseña:</label></li>
+    <input type="text" id="Contraseña" name="Contraseña" required>
+
+    <li><label for="RepetirContraseña">Repetir Contraseña:</label></li>
+    <input type="text" id="RepetirContraseña" name="RepetirContraseña" required>
+  </form>
+      <button type="submit">Registrar</button>
+
+    </tbody>
+  </table>
+
+  <script src="libs/html2pdf.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
